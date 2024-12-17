@@ -24,11 +24,11 @@ jobs:
     steps:
       # Step 1: Check out the repository
     - name: Checkout Repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     # Step 2: Set up Node.js
     - name: Setup Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: 18 # Use a compatible Node.js version
 
@@ -43,7 +43,6 @@ jobs:
 
     # Step 5: Deploy to GitHub Pages
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v4
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./ # Replace with your build folder (e.g., ./dist or ./docs)
+      uses: actions/deploy-pages@v4
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
