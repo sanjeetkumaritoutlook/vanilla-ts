@@ -46,6 +46,13 @@ If you're working with multiple TypeScript files or a project, initialize a Type
 
 tsc –init
 
+## Optional: Test Locally
+Before pushing to GitHub Pages, you can test the production build locally to ensure the paths are correct. Use a static server to serve the dist directory:
+npx serve dist
+
+http://localhost:5000
+
+
 ## Push Your Local Project to GitHub
 Make sure your project is already pushed to a GitHub repository. If not, initialize a repository and push your code:
 
@@ -55,3 +62,8 @@ git commit -m "Initial commit"
 git branch -M main
 git remote add origin https://github.com/<your-username>/<your-repo>.git
 git push -u origin main
+
+ ## there is no vite.config.ts 
+ Vite generates files with hashed names (e.g., index-dv8c_Ups.css) in the assets directory under the dist folder.
+ By default, these assets are linked relative to the root /, but GitHub Pages serves them relative to your repository's name (e.g., /your-repo-name/)
+  
