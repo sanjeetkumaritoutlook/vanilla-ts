@@ -2,7 +2,11 @@ import './style.css'
 import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.ts'
+import { greeting } from './greeting';
+import { counter } from './newcounter';
+import { formatDate } from './utils';
 
+const currentDate = new Date();
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
     <a href="https://vite.dev" target="_blank">
@@ -19,6 +23,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       Click on the Vite and TypeScript logos to learn more
     </p>
   </div>
+    <h1>${greeting('World')}</h1>
+      <p>${counter(5)}</p>
+<p>Today's date: ${formatDate(currentDate)}</p>
 `
 
 setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
