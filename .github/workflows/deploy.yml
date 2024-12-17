@@ -40,6 +40,11 @@ jobs:
     - name: Install Dependencies
       run: npm install
 
+    - name: Upload artifact for Pages
+      uses: actions/upload-pages-artifact@v3
+      with:
+         path: ./ 
+
     # Step 4: Build the project (compile TypeScript)
     - name: Build Project
       run: |
