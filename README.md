@@ -18,3 +18,40 @@ A module bundler that takes all the JavaScript code and assets in a project and 
 Babel is used to transpile the JavaScript code, making it compatible with older browsers, while Webpack is used to bundle and optimize the code. This combination allows developers to write code using the latest language features and ensure it's efficiently packaged for deployment.
 
 Babel is capable of converting JSX to JavaScript - the TypeScript compiler can't do this. So, if your project is built using React, you will need Babel.
+
+##  Install Node.js and TypeScript
+Ensure you have Node.js installed. Then, install TypeScript globally (if you haven't already):
+npm install -g typescript
+
+## Compile the TypeScript File
+Compile the TypeScript file into JavaScript using the tsc (TypeScript Compiler) command:
+
+tsc example.ts
+
+(or) npx tsc example.ts
+
+## Run the Compiled JavaScript File
+Use Node.js to run the compiled JavaScript file:
+
+node example.js
+
+## Watch Mode for Automatic Compilation (Optional) 
+For continuous development, you can use tsc in watch mode to automatically recompile the 
+TypeScript file when changes are made:
+
+tsc example.ts –watch
+
+## . Configure a tsconfig.json (Optional)
+If you're working with multiple TypeScript files or a project, initialize a TypeScript configuration file:
+
+tsc –init
+
+## Push Your Local Project to GitHub
+Make sure your project is already pushed to a GitHub repository. If not, initialize a repository and push your code:
+
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/<your-username>/<your-repo>.git
+git push -u origin main
