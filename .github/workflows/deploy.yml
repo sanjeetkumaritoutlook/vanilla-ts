@@ -39,11 +39,15 @@ jobs:
     # Step 3: Install dependencies
     - name: Install Dependencies
       run: npm install
+ 
+    # Step 4: Build the Vite project
+    - name: Build Project
+      run: npm run build
 
     - name: Upload artifact for Pages
       uses: actions/upload-pages-artifact@v3
       with:
-         path: ./ 
+         path: ./dist 
 
     # Step 4: Build the project (compile TypeScript)
     - name: Build Project
@@ -55,3 +59,4 @@ jobs:
       uses: actions/deploy-pages@v4
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist

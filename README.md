@@ -41,7 +41,7 @@ TypeScript file when changes are made:
 
 tsc example.ts –watch
 
-## . Configure a tsconfig.json (Optional)
+## Configure a tsconfig.json (Optional)
 If you're working with multiple TypeScript files or a project, initialize a TypeScript configuration file:
 
 tsc –init
