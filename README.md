@@ -67,3 +67,6 @@ git push -u origin main
  Vite generates files with hashed names (e.g., index-dv8c_Ups.css) in the assets directory under the dist folder.
  By default, these assets are linked relative to the root /, but GitHub Pages serves them relative to your repository's name (e.g., /your-repo-name/)
   
+## Module System: 
+
+TypeScript uses the ES Module system (with import and export), so ensure your TypeScript configuration (tsconfig.json) supports this. If you're using Node.js, make sure it supports ES Modules or use module: "commonjs" for compatibility.  
