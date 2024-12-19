@@ -7,6 +7,42 @@ import { counter } from './newcounter';
 import { formatDate } from './utils';
 import {FullTimeEmployee,printEmployeeDetails} from './concepts';
 import { Direction } from './enum';
+import { loadHome } from './pages/home';
+import { loadAbout } from './pages/about';
+
+function router() {
+  const path = window.location.pathname;
+
+  switch (path) {
+    case '/about':
+      loadAbout();
+      break;
+    case '/home':
+   // default:
+      loadHome();
+      break;
+  }
+}
+
+function navigateTo(path: string) {
+  history.pushState({}, '', path);
+  router();
+}
+document.addEventListener('DOMContentLoaded', () => {
+  // Set up navigation links
+  document.body.addEventListener('click', (event) => {
+    const target = event.target as HTMLAnchorElement;
+    if (target.tagName === 'A' && target.dataset.link !== undefined) {
+      event.preventDefault();
+      navigateTo(target.href);
+    }
+  });
+    // Initialize the router
+    router();
+  });
+  
+  // Handle browser navigation events
+  window.addEventListener('popstate', router);
 
 const currentDate = new Date();
 // Creating an instance of FullTimeEmployee class
@@ -37,6 +73,10 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <p>Today's date: ${formatDate(currentDate)}</p>
 <div id="employee-container">${printEmployeeDetails(emp1)}<div>
 <p>${moveCharacter(currentDirection)}</p>
+ <nav>
+    <a href="/home" data-link>Home</a>
+    <a href="/about" data-link>About</a>
+  </nav>
 `
 
 setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)

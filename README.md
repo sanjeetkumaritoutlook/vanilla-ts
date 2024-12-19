@@ -70,3 +70,7 @@ git push -u origin main
 ## Module System: 
 
 TypeScript uses the ES Module system (with import and export), so ensure your TypeScript configuration (tsconfig.json) supports this. If you're using Node.js, make sure it supports ES Modules or use module: "commonjs" for compatibility.  
+
+## Basic routing system
+
+using plain TypeScript in a Vite project without React (or any other UI framework), routing is not handled natively since TypeScript alone is a programming language and does not have built-in support for routing. However, you can implement navigation logic programmatically within your .ts files.
