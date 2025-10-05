@@ -1,0 +1,22 @@
+ body {
+      font-family: sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    #todo-container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+    }
+    input, button {
+      padding: 8px;
+      margin-top: 5px;
+      width: 100%;
+    }
+    li {
+      margin: 5px 0;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+    }
