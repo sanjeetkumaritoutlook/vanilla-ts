@@ -1,12 +1,39 @@
 ## Use a Bundler (e.g., Vite, Webpack)
 For larger projects, you can use a bundler like Vite or Webpack to handle TypeScript files and serve them in the browser.
 
-Vite is a local development server written by Evan You,[1] the creator of Vue.js, and used by default by Vue and for React project templates. It has support for TypeScript and JSX. It uses Rollup  and esbuild internally for bundling
+Vite is a local development server written by Evan You,[1] the creator of Vue.js, and used by default by Vue and for React project templates. 
+
+It has support for TypeScript and JSX. It uses Rollup  and esbuild internally for bundling
+
+use command in local for vite to rrun: npm run dev
 
 vite runs on: http://localhost:5173/
 
 Webpack is a free and open-source module bundler for JavaScript.[5][6][7][8] It is made primarily for JavaScript, but it can transform front-end assets such as HTML, CSS, and images if the corresponding loaders are included.[9] Webpack takes modules with dependencies and generates static assets representing those modules
 tools that convert typescript to javascript
+
+## another directory inside
+
+runs on live server
+
+just run : npx live-server
+
+if new code added in ts file, then run: npx tsc example.ts -> to generate new js file version
+
+
+## javascript questions:
+1.	What is event loop in javascript?
+
+2.	Two queues in event loop to manage asynchronous operations: macrotask (also known as the callback queue or task queue) and microtask (also known as the job queue).
+
+3.	Map, filter and reduce method in javascript
+
+4.	Promises vs async /await, and in which situation to use async/await
+
+5.	Factors responsible for UI performance- optimization
+
+6.	Debugging techniques
+
 
 ## babel vs webpack
 ### Babel
